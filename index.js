@@ -14,7 +14,7 @@ $(document).keypress(function(){
         nextSequence();
         started = true;
         $("p").remove();
-        var backMusic = new Audio("background.mp3");
+        var backMusic = new Audio("sounds/background.mp3");
         backMusic.play();
         backMusic.volume = 0.2;
         setTimeout(function(){
@@ -56,7 +56,7 @@ $(".btn").click(function(e){
 });
 
 function playSound(name){
-    var audio = new Audio(`${name}.mp3`);
+    var audio = new Audio(`sounds/${name}.mp3`);
     audio.play();
 }
 
@@ -106,3 +106,18 @@ function animation(color){
         $("#"+color).removeClass("pressed");
     },100);
 }
+
+$(".start-button").click(function(){
+    if(!started){
+        nextSequence();
+        started = true;
+        $("p").remove();
+        var backMusic = new Audio("sounds/background.mp3");
+        backMusic.play();
+        backMusic.volume = 0.2;
+        setTimeout(function(){
+            playSound("lets");
+        },100)
+
+    }
+});
