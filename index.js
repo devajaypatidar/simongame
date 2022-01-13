@@ -120,4 +120,9 @@ $(".start-button").click(function(){
         },100)
 
     }
+
+    setTimeout(function(){
+        $(".start-button").remove();
+    },10000)
 });
+
