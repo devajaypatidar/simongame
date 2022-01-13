@@ -8,6 +8,8 @@ body {
   font-size: 3rem;
   margin-top:  5% ;
   color: #FEF2BF;
+ 
+
 }
 
 .container {
@@ -66,5 +68,22 @@ p,#score,#highScore{
   margin-left:3rem;
 }
 
+.start-button{
+  background-color: rgb(255, 255, 255);
+  width: 20%;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 25px;
+}
 
 
+@media only screen and (min-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
+  .start-button{
+    display: none;
+  }
+
+  
+
+
+}
